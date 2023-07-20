@@ -1,6 +1,9 @@
 heroes = [];
 
-function init() {}
+function init() {
+  let allHereoes = localStorage.getItem("heroes");
+  heroes = JSON.parse(allHereoes);
+}
 
 function addTask() {
   let in_name = document.querySelector("#name").value;
